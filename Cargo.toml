@@ -1,0 +1,16 @@
+[package]
+name = "wasm-example"
+version = "0.1.0"
+edition = "2021"
+description = "an example wasmer package"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wapm]
+namespace = "vaporyhumo"
+abi = "none"
+bindings = { wai-version = "0.1.0", exports = "wasm-example.wai" }
+
+[dependencies]
+wai-bindgen-rust = "0.2.3"
